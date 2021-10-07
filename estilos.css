@@ -12,20 +12,20 @@ body {
     height: 5%;
     border-radius: 10px; 
     text-align: center;
-    height: 50px;
     padding: 320px;
 }
 section{
     display: flexbox;
     width: 80%;
     padding: 320px;
-    height: 70%;
+    height: 85%;
 }
 footer {
     display: flexbox;
     width: 80%;
     padding: 320px;
-    height: 20%;
+    height: 10%;
+    background-color: rgba(43, 18, 187, 0.596);
     /*
     height: 50px;
     text-align: center;
