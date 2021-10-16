@@ -9,55 +9,87 @@
     rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        function mutePage() {
+    var elems = document.querySelectorAll("video, audio");
+    [].forEach.call(elems, function(elem) { muteMe(elem); });
+    }
+    </script>
 </head>
-<body>
-    <header>
-        <img id="imagen_encabezado" src="https://media.kingston.com/hyperx/headers/hx-header-accessories-landing-md.jpg" />
+<body class="body">
+    <header class="header">
+        <section class="header_logo">
+            <img src="https://drive.google.com/uc?export=view&id=1AeoxtzdDlgMn4_Ho6cZfjVA-rUsVjwm0" alt="LOGO">
+        </section>
+        <nav>
+            <ul class="header_nav">
+                <a href=""></a>
+                <li class="header_nav_item"><a href="">Inicio</a></li>
+                <li class="header_nav_item"><a href="">Calculadora</a></li>
+                <li class="header_nav_item"><a href="">Vivienda VIS</a></li>
+                <li class="header_nav_item"><a href="">Quiénes somos</a></li>
+                <li class="header_nav_item"><a href="">Configuración</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-      <!--  <div class= "container">  contenedor página -->
-        <div id="nav_drawer" > <!--  contenedor menú -->
-            <!-- botones del menu -->
-            <a href="registro.html"><button  type="button" id ="buttonreg_nav" >Regístrate</button></a>
-            <a href="#"><button class = "btn-opcional" type="button" id ="categorias">Categorías</button></a>
-            <a href="#"><button class = "btn-opcional" type="button" id ="contacto">Contáctanos</button></a>
-            <a href="aspectosgenerales.html"> <button  class = "btn-opcional" type="button" id ="configuracion" > Configuración</button></a>
-            <a href="index.html"> <button  class = "btn-opcional" type="button" id ="configuracion" > Inicio</button></a>
-        </div> <!--  fin contenedor menú -->
-    </nav>
-    <section>
-        <!--<div class="main"> -->
-            <h1>Configuración</h1><br>
+
+
+    <section class="contenedor">
+        
+        <aside class="aside">
+            <button class="aside_button">Registrarse</button>
+        </aside>
+    <section class="main_section">
+        <div class="main">
+            <h1 class="main_titulo">Configuración</h1>
     
-                   <!-- <h2>Apariencia</h2> <br> -->
             <table>
                 <ul>
                     <tr>
-                               
-                        <td><button type="button" class="more material-icons" name="sonido">  volume_off </button></td>
-                         <td><button  type="button" class="more material-icons" name="modo" > dark_mode </button></td>
+                        <td> <h3>Silenciar</h3></td><br>
+                        <td><button type="button" class="more material-icons" name="sonido" onclick="mutePage()">  volume_off </button></td>
+                    </tr>
+                    <tr>  
+                        <td> <h3>Activar modo oscuro</h3></td><br>
+                        <td><button  type="button" class="more material-icons" name="modo" onclick="cambiarModo()"> dark_mode </button></td>
+                    </tr>
+                    <tr>
+                        <td> <h3>Cambiar lenguaje</h3></td><br>
                         <td><button  type="button" class="more material-icons" name="idioma"> language </button></td>
-
-
                     </tr>
                  </ul>
             </table>
          
-      <!--  </div> -->
-      <!--   </div>  fin contenedor página -->
+        </div>
     </section>   
-    <footer>
-        <div class="pie_pagina"> 
-            <h3> Desarrolladores</h3>
-            <ul>
-                <li>ELIANA JARAMILLO ÁNGEL<br></li>
-                <li>DANILO ENRIQUE ORTÍZ CAMPILLO<br></li>
-                <li>DIEGO ALEJANDRO GUZMÁN MONCADA<br></li>
-                <li>DAVID FERNANDO ISAZA RESTREPO<br></li>
-                <li>ELKIN ALEXIS ARIAS ZAPATA<br></li>
+    <footer class="footer">
+    
+        <section class="footer_desarrolladores">
+            <h2>Desarrolladores</h2>
+            <ul class="footer_lista">
+                <li class="footer_item">Eliana Lucia Jaramillo Angel</li>
+                <li class="footer_item">Danilo Enrique Ortíz Campillo</li>
+                <li class="footer_item">Diego Alejandro Guzmán Moncada</li>
+                <li class="footer_item">Elkin Alexis Arias Zapata</li>
+                <li class="footer_item"> David Fernando Isaza Restrepo</li>
             </ul>
-        </div> 
+        </section>
+
+        <section class="footer_contactanos">
+            <h2>Contáctanos</h2>
+            <img src="https://drive.google.com/uc?export=view&id=1W10TGneTY8hz1OB7PqO34aeeCXKTnngL" alt="Icono Cellphone">
+            <img src="https://drive.google.com/uc?export=view&id=17OnAhiN1W8jvIxFhwNLgsrVmP9h0IEZC" alt="Icono Mail">
+            <img src="https://drive.google.com/uc?export=view&id=1t89pCXiLcCo8D5qykwqYUrHe_y1y-cbY" alt="Icono Whatsapp">
+        </section>
     </footer>
+    
+    <script type="text/javascript"> 
+        function cambiarModo(){ 
+          var cuerpoweb = document.body; 
+          cuerpoweb.classList.toggle("oscuro"); 
+        } 
+    </script>
+
 </body>
 
 </html> 
